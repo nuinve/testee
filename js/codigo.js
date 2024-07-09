@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('Cadastro realizado com sucesso!');
 
             
-            window.location.href = 'tarefa.html';
+            window.location.href = 'tarefas.html';
         } else {
             alert('Por favor, preencha todos os campos.');
         }
