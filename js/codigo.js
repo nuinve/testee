@@ -65,16 +65,31 @@ document.addEventListener("DOMContentLoaded", function() {
         chart.data.datasets[0].data[1] = tasks.length - completedTasks;
         chart.update();
     }
-    document.getElementById('cadastro').addEventListener('submit', function(e) {
-        e.preventDefault();
+    
+});
+document.addEventListener("DOMContentLoaded", function() {
+    
+    function registrarUsuario() {
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const senha = document.getElementById('senha').value;
-        localStorage.setItem('isRegistered', 'true');
-        localStorage.setItem('userName', nome);
-        alert('Cadastro realizado com sucesso!');
-        window.location.href = 'tarefa.html';
-    });
+
+        
+        if (nome && email && senha) {
+            
+            localStorage.setItem('isRegistered', 'true');
+            localStorage.setItem('userName', nome);
+
+            alert('Cadastro realizado com sucesso!');
+
+            
+            window.location.href = 'tarefa.html';
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    }
+
+    
+    window.registrarUsuario = registrarUsuario;
 });
 
-// verificação cad.
