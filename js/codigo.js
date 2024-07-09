@@ -76,5 +76,5 @@ document.getElementById('cadastro').addEventListener('submit', function(e) {
     localStorage.setItem('isRegistered', 'true');
     localStorage.setItem('userName', nome);
     alert('Cadastro realizado com sucesso!');
-    window.location.href = 'index.html';
+    window.location.href = 'tarefa.html';
 });
